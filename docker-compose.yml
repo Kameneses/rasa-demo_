@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  rasa:
+    image: jaimeteb/02_pokebot:latest
+    #env_file: .env
+    volumes:
+      - models:/app/models
+      - ./:/app
+    ports:
+      - "5002:5002"
+      - "5005:5005"
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '1'
+    #       memory: 800M
+
+volumes:
+  models:
