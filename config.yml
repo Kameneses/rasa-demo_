@@ -1,4 +1,4 @@
-language: es_core_news_lg
+language: es_core_news_md
 
 pipeline:
   - name: SpacyNLP

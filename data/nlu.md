@@ -54,6 +54,7 @@
 - [79](numero_pokemon)
 - Charmander
 - [Charmander](nombre_pokemon)
+- [Mew](nombre_pokemon)
 
 ## regex:numero_pokemon
 - [0-9]{1,3}

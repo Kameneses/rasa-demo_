@@ -1,17 +1,18 @@
-actions:
-- action_buscar_pokemon
-- utter_ask_pokemon
-- utter_info_pokemon
-- utter_info_pokemon_sin_imagen
-- utter_pokemon_no_encontrado
-- utter_saludo
-entities:
-- nombre_pokemon
-- numero_pokemon
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
 intents:
 - saludo
 - buscar_pokemon
 - start
+entities:
+- nombre_pokemon
+- numero_pokemon
+slots:
+  nombre_pokemon:
+    type: text
+  numero_pokemon:
+    type: text
 responses:
   utter_ask_pokemon:
   - text: ¿Qué Pokémon deseas buscar? Ingresa un nombre o un número.
@@ -24,11 +25,10 @@ responses:
   - text: Lo siento, no se encontraron resultados. 😥
   utter_saludo:
   - text: ¡Hola amigo! Bienvenido al Pokébot. 😊
-session_config:
-  carry_over_slots_to_new_session: false
-  session_expiration_time: 60
-slots:
-  nombre_pokemon:
-    type: text
-  numero_pokemon:
-    type: text
+actions:
+- action_buscar_pokemon
+- utter_ask_pokemon
+- utter_info_pokemon
+- utter_info_pokemon_sin_imagen
+- utter_pokemon_no_encontrado
+- utter_saludo
